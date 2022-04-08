@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 style="text-align: center;">Utkarsh Tripathi Presents </h1>
+    <meta charset="UTF-8">
+    <title style="text-align: center;">Speech Recognition in Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+</head>
+<body>
 
+
+<div id="speechContainer">
+    <h1 style="text-align: center;">Upload new File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input style="text-align: center;" type="file" name="file"/>
+        <br>
+        <input style="text-align: center;" type="submit" id="submitButton" value="Transcribe"/>
+    </form>
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <h1 >Transcript</h1>
+            <p id="speechText">{{ transcript }}</p>
+        </div>
+    {% endif %}
+</div>
+
+    <script  src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player  src="https://assets6.lottiefiles.com/private_files/lf30_h04isle8.json"  background="transparent"  speed="0.6"  style="width: 500px; height: 500px;"  loop autoplay></lottie-player>                
+    
+    
+    <script  style="text-align:right;" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player style="text-align:right;" src="https://assets2.lottiefiles.com/packages/lf20_fqq8qnvu.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+
+
+   
+
+</body>
+</html>
